@@ -4,9 +4,9 @@ import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
 import { VehicleDetailComponent } from './vehicle-detail/vehicle-detail.component';
 
 export const routes: Routes = [
-    { path: '', component: VehicleListComponent }, // Rota para a listagem de veículos (página inicial)
-  { path: 'add', component: VehicleFormComponent }, // Rota para adicionar um novo veículo
-  { path: 'edit/:id', component: VehicleFormComponent }, // Rota para editar um veículo existente (o ':id' é um parâmetro)
-  { path: 'detail/:id', component: VehicleDetailComponent }, // Rota para detalhes de um veículo (opcional)
-  { path: '**', redirectTo: '', pathMatch: 'full' } // Rota curinga para redirecionar para a página inicial em caso de rota não encontrada
+    { path: '', component: VehicleListComponent }, 
+  { path: 'add', component: VehicleFormComponent }, 
+  { path: 'edit/:id', component: VehicleFormComponent }, 
+  { path: 'detail/:id', component: VehicleDetailComponent }, 
+  { path: '**', redirectTo: '', pathMatch: 'full' } 
 ];

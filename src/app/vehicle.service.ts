@@ -10,7 +10,7 @@ import { environment} from '../environments/environment';
 export class VehicleService {
   private apiUrl = `${environment.apiUrl}/api/veiculos`;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAllVehicles(): Observable<Vehicle[]> {
     return this.http.get<Vehicle[]>(this.apiUrl);

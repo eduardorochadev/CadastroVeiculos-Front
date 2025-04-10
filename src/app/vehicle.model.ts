@@ -1,5 +1,5 @@
 export interface Vehicle {
-    id?: number; // O ID pode ser opcional ao criar um novo veículo
+    id?: number; 
     placa: string;
     chassi: string;
     renavam: string;
