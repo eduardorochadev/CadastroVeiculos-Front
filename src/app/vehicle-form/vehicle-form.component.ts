@@ -58,6 +58,7 @@ export class VehicleFormComponent implements OnInit {
   onSubmit(): void {
     if (this.vehicleForm.valid) {
       const vehicle: Vehicle = this.vehicleForm.value;
+      console.log('Conteúdo do formulário:', vehicle);
       if (this.isEditMode && this.vehicleId) {
         this.vehicleService.updateVehicle(this.vehicleId, vehicle).subscribe(
           () => {

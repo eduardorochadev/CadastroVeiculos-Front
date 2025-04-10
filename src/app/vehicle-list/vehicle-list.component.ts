@@ -24,6 +24,7 @@ export class VehicleListComponent implements OnInit {
     this.vehicleService.getAllVehicles().subscribe({
       next: (vehicles) => {
         this.vehicles = vehicles;
+        console.log('Veículos carregados:', this.vehicles);
       },
       error: (error) => {
         console.error('Erro ao carregar veículos:', error);
