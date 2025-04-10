@@ -4,16 +4,16 @@
 Esta é uma aplicação frontend desenvolvida com **Angular** que permite **cadastrar, listar, editar e excluir veículos**. É um CRUD completo com formulário reativo e integração com backend (JSON Server, API REST, etc.).
 
 ## 🛠 Tecnologias utilizadas
-
+``
 - [Angular CLI 18](https://angular.io/)
 - TypeScript
 - HTML5 + SCSS
 - Reactive Forms
 - Angular Router
-
+````
 
 ## 📦 Funcionalidades
-
+````
 - ✅ Cadastro de veículo com os seguintes campos:
   - Placa
   - Chassi
@@ -26,14 +26,15 @@ Esta é uma aplicação frontend desenvolvida com **Angular** que permite **cada
 - ✅ Validações nos campos do formulário
 - ✅ Navegação entre as telas de listagem e edição
 - ✅ Estilo responsivo básico com SCSS
+````
 
 ## ▶️ Como rodar o projeto
 
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
-cd seu-repo
+git clone https://github.com/eduardorochadev/CadastroVeiculosFront
+cd CadastroVeiculosFront
 ```
 
 ### 2. Instale as dependências
