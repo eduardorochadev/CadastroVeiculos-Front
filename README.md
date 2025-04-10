@@ -52,9 +52,6 @@ Acesse no navegador: `http://localhost:4200`
 
 ### 4. (Opcional) Inicie o JSON Server (caso use)
 
-```bash
-npx json-server --watch db.json
-```
 
 ## 🗂 Estrutura de pastas
 
@@ -72,4 +69,4 @@ src/
 
 **Eduardo Macedo**  
 Desenvolvedor Full Stack | entusiasta automotivo  
-[LinkedIn](https://linkedin.com/in/eduardo-seu-perfil) • [GitHub](https://github.com/seu-usuario)
+[LinkedIn](https://www.linkedin.com/in/eduardomacedor/) • [GitHub](https://github.com/eduardorochadev)
