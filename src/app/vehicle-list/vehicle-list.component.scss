@@ -1,9 +1,31 @@
+
 .container {
-    padding: 20px;
+  max-width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;  
+  background-color: antiquewhite;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  h1 {
+  header {
+    height: 50px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
+    background-color:darkorange;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 20px;
     color: #333;
   }
   
