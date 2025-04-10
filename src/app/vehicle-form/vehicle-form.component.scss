@@ -1,0 +1,113 @@
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+  
+      .form-group {
+        margin-bottom: 15px;
+  
+        label {
+          display: block;
+          margin-bottom: 5px;
+          color: #555;
+          font-weight: bold;
+        }
+  
+        input[type="text"],
+        input[type="number"] {
+          width: calc(100% - 22px);
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 1rem;
+          box-sizing: border-box;
+  
+          &:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+          }
+        }
+  
+        .error-message {
+          color: #dc3545;
+          font-size: 0.9rem;
+          margin-top: 5px;
+        }
+      }
+  
+      .actions {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+  
+        button {
+          padding: 10px 15px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 1rem;
+          transition: background-color 0.3s ease;
+  
+          &.save {
+            background-color: #28a745;
+            color: white;
+            &:hover {
+              background-color: #1e7e34;
+            }
+          }
+  
+          &.cancel {
+            background-color: #6c757d;
+            color: white;
+            &:hover {
+              background-color: #5a6268;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 480px) {
+    .container {
+      padding: 15px;
+      margin: 10px;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+  
+    .form-group label {
+      font-size: 0.9rem;
+    }
+  
+    .form-group input[type="text"],
+    .form-group input[type="number"] {
+      font-size: 0.95rem;
+    }
+  
+    .actions {
+      flex-direction: column-reverse; /* Inverte a ordem dos botões em telas pequenas */
+      gap: 5px;
+      button {
+        width: 100%;
+      }
+    }
+  }

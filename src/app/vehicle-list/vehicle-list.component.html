@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Lista de Veículos</h1>
+
+  <button class="button primary" (click)="addVehicle()">Adicionar Veículo</button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Placa</th>
+        <th>Chassi</th>
+        <th>Renavam</th>
+        <th>Modelo</th>
+        <th>Marca</th>
+        <th>Ano</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehicle of vehicles">
+        <td>{{ vehicle.id }}</td>
+        <td data-label="Placa">{{ vehicle.placa }}</td>
+        <td data-label="Chassi">{{ vehicle.chassi }}</td>
+        <td data-label="Renavam">{{ vehicle.renavam }}</td>
+        <td data-label="Modelo">{{ vehicle.modelo }}</td>
+        <td data-label="Marca">{{ vehicle.marca }}</td>
+        <td data-label="Ano">{{ vehicle.ano }}</td>
+        <td class="actions">
+          <button class="button edit" (click)="editVehicle(vehicle.id!)">Editar</button>
+          <button class="button delete" (click)="deleteVehicle(vehicle.id!)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

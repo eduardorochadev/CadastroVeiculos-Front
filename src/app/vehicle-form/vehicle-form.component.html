@@ -1,0 +1,60 @@
+<div class="container">
+  <h1>{{ isEditMode ? 'Editar Veículo' : 'Adicionar Novo Veículo' }}</h1>
+
+  <form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="placa">Placa:</label>
+      <input type="text" id="placa" formControlName="placa">
+      <div *ngIf="vehicleForm.get('placa')?.invalid && (vehicleForm.get('placa')?.dirty || vehicleForm.get('placa')?.touched)" class="error-message">
+        Placa é obrigatória.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="chassi">Chassi:</label>
+      <input type="text" id="chassi" formControlName="chassi">
+      <div *ngIf="vehicleForm.get('chassi')?.invalid && (vehicleForm.get('chassi')?.dirty || vehicleForm.get('chassi')?.touched)" class="error-message">
+        Chassi é obrigatório.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="renavam">Renavam:</label>
+      <input type="text" id="renavam" formControlName="renavam">
+      <div *ngIf="vehicleForm.get('renavam')?.invalid && (vehicleForm.get('renavam')?.dirty || vehicleForm.get('renavam')?.touched)" class="error-message">
+        Renavam é obrigatório.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="modelo">Modelo:</label>
+      <input type="text" id="modelo" formControlName="modelo">
+      <div *ngIf="vehicleForm.get('modelo')?.invalid && (vehicleForm.get('modelo')?.dirty || vehicleForm.get('modelo')?.touched)" class="error-message">
+        Modelo é obrigatório.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="marca">Marca:</label>
+      <input type="text" id="marca" formControlName="marca">
+      <div *ngIf="vehicleForm.get('marca')?.invalid && (vehicleForm.get('marca')?.dirty || vehicleForm.get('marca')?.touched)" class="error-message">
+        Marca é obrigatória.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="ano">Ano:</label>
+      <input type="number" id="ano" formControlName="ano">
+      <div *ngIf="vehicleForm.get('ano')?.invalid && (vehicleForm.get('ano')?.dirty || vehicleForm.get('ano')?.touched)">
+        <div *ngIf="vehicleForm.get('ano')?.errors?.['required']" class="error-message">Ano é obrigatório.</div>
+        <div *ngIf="vehicleForm.get('ano')?.errors?.['min']" class="error-message">Ano deve ser maior ou igual a 1900.</div>
+        <div *ngIf="vehicleForm.get('ano')?.errors?.['max']" class="error-message">Ano não pode ser maior que o ano atual.</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="button save">{{ isEditMode ? 'Salvar' : 'Adicionar' }}</button>
+      <button type="button" class="button cancel" (click)="onCancel()">Cancelar</button>
+    </div>
+  </form>
+</div>
