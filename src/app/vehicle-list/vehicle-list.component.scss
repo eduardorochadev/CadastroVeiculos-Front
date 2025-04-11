@@ -1,126 +1,166 @@
-
 .container {
   max-width: 80%;
   height: 100%;
   margin: 0 auto;
   margin-top: 20px;
-  padding: 20px;  
+  padding: 20px;
   background-color: antiquewhite;
   color: #333;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  height: auto;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: darkorange;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #333;
+}
+
+.button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button.primary {
+  background-color: #007bff;
+  color: white;
+}
+.button.primary:hover {
+  background-color: #0056b3;
+}
+
+.button.edit {
+  background-color: #28a745;
+  color: white;
+  margin-right: 5px;
+}
+.button.edit:hover {
+  background-color: #1e7e34;
+}
+
+.button.delete {
+  background-color: #dc3545;
+  color: white;
+}
+.button.delete:hover {
+  background-color: #c82333;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.table thead {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table .actions {
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 95%;
+    padding: 10px;
   }
-  
+
   header {
-    height: 50px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color:darkorange;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   h1 {
-    font-size: 1.5rem;
-    margin: 20px;
-    color: #333;
+    font-size: 1.25rem;
   }
-  
+
   .button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-  
-    &.primary {
-      background-color: #007bff;
-      color: white;
-      &:hover {
-        background-color: #0056b3;
-      }
-    }
-  
-    &.edit {
-      background-color: #28a745;
-      color: white;
-      margin-right: 5px;
-      &:hover {
-        background-color: #1e7e34;
-      }
-    }
-  
-    &.delete {
-      background-color: #dc3545;
-      color: white;
-      &:hover {
-        background-color: #c82333;
-      }
-    }
-  }
-  
-  .table {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-  
-    thead {
-      background-color: #f8f9fa;
-      border-bottom: 1px solid #dee2e6;
-    }
-  
-    th, td {
-      padding: 12px 15px;
-      text-align: left;
-    }
-  
-    tbody tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-  
-    .actions {
-      white-space: nowrap;
-    }
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
-  
-  /* Estilos responsivos */
-  @media (max-width: 600px) {
-    table {
-      display: block;
-      overflow-x: auto;
-    }
-    thead tr {
-      display: flex;
-    }
-    th {
-      min-width: 120px;
-    }
-    td {
-      display: flex;
-      align-items: center;
-      min-width: 120px;
-      &::before {
-        content: attr(data-label);
-        font-weight: bold;
-        margin-right: 10px;
-      }
-    }
-    tr td:first-child {
-      display: none; /* Oculta o ID em telas pequenas */
-    }
-    .actions {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      button {
-        width: 100%;
-      }
-    }
+
+  .table {
+    overflow-x: auto;
+    display: block;
   }
+
+  .table th,
+  .table td {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .table .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Valor intermediário: tablets e celulares grandes */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .button {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  .table th,
+  .table td {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .table .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
